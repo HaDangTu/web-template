@@ -1,1 +1,4 @@
 /* Your style here */
+.app {
+  height: inherit;
+}
