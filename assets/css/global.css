@@ -1,1 +1,8 @@
 /* Your global style here */
+html, body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
