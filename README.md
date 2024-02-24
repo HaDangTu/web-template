@@ -1,2 +1,2 @@
-# web-templates
-Website templates
+# Your template name
+Template description
