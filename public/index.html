@@ -1,29 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/global.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <title>Du lịch</title>
-</head>
-<body>
-  <div class="app">
-    <header class="header navbar nav-expand-lg sticky-top"></header>
-    <div class="container-fluid">
-      <aside></aside>
-      <div class="main"></div>
-    </div>
-    <div class="footer"></div>
-  </div>
-  
-  <!-- 3rd party libs here -->
-  <script src="/assets/js/jquery-3.7.1.min.js"></script>
-  <script src="/assets/js/bootstrap.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
-  <!-- Your script here -->
-  <script src="/assets/js/script.js"></script>
-</body>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Du lịch</title>
+  </head>
+  <body>
+    <div class="app">
+      <header id="header" class="header navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="app-nav-brand nav-brand" href="/">
+            <img src="/assets/images/logo.png" width="160px" />
+          </a>
+          <button class="app-navbar-toggler" onclick="toggleSideMenu()">
+            <span class="material-symbols-rounded" style="color: #fff"
+              >menu</span
+            >
+          </button>
+
+          <nav
+            class="collapse navbar-collapse justify-content-center"
+            id="nav-header"
+          >
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a href="#home" class="app-nav-link nav-link active"
+                  >Trang chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <div class="app-nav-link nav-link dropdown">
+                  <span data-bs-toggle="dropdown" aria-expanded="false"
+                    >Tours</span
+                  >
+                  <ul class="dropdown-menu" data-bs-popper="static">
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="#vietnam">Việt Nam</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="#thailan">Thái Lan</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="#asia">Châu Á</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="#europe">Châu Âu</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="#about-me" class="app-nav-link nav-link">Giới Thiệu</a>
+              </li>
+              <li class="nav-item">
+                <a href="#news" class="app-nav-link nav-link">Tin Tức</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="app-nav-link nav-link">Liên Hệ</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="hstack gap-2">
+            <button class="btn btn-outline-light app-nav-button-outline">
+              Login
+            </button>
+            <button class="btn btn-light">Sign Up</button>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <aside id="side-menu" class="side-menu" data-menu-show="false">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="#home" class="app-nav-link nav-link active">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-me" class="app-nav-link nav-link">Giới Thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a href="#news" class="app-nav-link nav-link">Tin Tức</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="app-nav-link nav-link">Liên Hệ</a>
+            </li>
+          </ul>
+        </aside>
+        <section class="header-section">
+          <div class="container">
+            <h1 class="text-light text-center">
+              Chuyến đi tiếp theo của bạn...
+            </h1>
+            <h3 class="text-center text-light">MỖI NGÀY CÓ HƠN +100 TOUR</h3>
+            <form class="mt-5 mb-5">
+              <div class="row">
+                <div class="col col-md-1 col-lg-4"></div>
+                <div class="col-12 col-md-10 col-lg-4">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control app-inline-input"
+                      placeholder="Tìm kiếm..."
+                    />
+                    <div class="input-group-append">
+                      <button class="btn app-inline-button" type="button">
+                        <span
+                          class="material-symbols-rounded"
+                          style="color: #a3a3a3; line-height: unset"
+                        >
+                          search
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-md-1 col-lg-4"></div>
+              </div>
+            </form>
+
+            <div class="hstack gap-4 justify-content-center flex-wrap">
+              <a href="/vietnam" class="app-card-link">
+                <div class="d-flex flex-column align-items-center gap-3">
+                  <span class="material-symbols-rounded" style="color: #fff"
+                    >flightsmode</span
+                  >
+                  <h6>Việt Nam</h6>
+                </div>
+              </a>
+              <a href="/thailand" class="app-card-link">
+                <div class="d-flex flex-column align-items-center gap-3">
+                  <span class="material-symbols-rounded" style="color: #fff"
+                    >flightsmode</span
+                  >
+                  <h6>Thái Lan</h6>
+                </div>
+              </a>
+              <a href="/asia" class="app-card-link">
+                <div class="d-flex flex-column align-items-center gap-3">
+                  <span class="material-symbols-rounded" style="color: #fff"
+                    >flightsmode</span
+                  >
+                  <h6>Châu Á</h6>
+                </div>
+              </a>
+              <a href="/europe" class="app-card-link">
+                <div class="d-flex flex-column align-items-center gap-3">
+                  <span class="material-symbols-rounded">flightsmode</span>
+                  <h6>Châu Âu</h6>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <h3 class="text-center fw-bold">ĐIỂM ĐẾN CỦA CHÚNG TÔI</h3>
+            <div class="hstack flex-wrap justify-content-center gap-4 mt-4">
+              <div
+                class="app-hover-card-container app-background-img"
+                style="background-image: url(/assets/images/vietnam.jpg)"
+              >
+                <div class="card-header">
+                  <h5>Việt Nam</h5>
+                  <p class="m-0">2 Địa điểm</p>
+                </div>
+                <div
+                  class="card-body d-flex flex-column justify-content-center align-items-center"
+                >
+                  <h5 class="fw-bold mb-3">Địa điểm</h5>
+                  <a class="app-link link-light" href="#mien-tay">
+                    <h6 class="text-center">Miền Tây</h6>
+                  </a>
+                  <a class="app-link link-light" href="#vinh-ha-long">
+                    <h6 class="text-center">Vịnh Hạ Long</h6>
+                  </a>
+                  <a
+                    class="btn btn-outline-light app-nav-button-outline mt-3"
+                    href="#tour/vietnam"
+                  >
+                    Chi Tiết
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="app-hover-card-container app-background-img"
+                style="background-image: url(/assets/images/thailand.jpg)"
+              >
+                <div class="card-header">
+                  <h5>Thái Lan</h5>
+                  <p class="m-0">1 Địa điểm</p>
+                </div>
+                <div
+                  class="card-body d-flex flex-column justify-content-center align-items-center"
+                >
+                  <h5 class="fw-bold mb-3">Địa điểm</h5>
+                  <a class="app-link link-light" href="#phuket">
+                    <h6 class="text-center">Phuket</h6>
+                  </a>
+                  <a
+                    class="btn btn-outline-light app-nav-button-outline mt-3"
+                    href="#tour/thailand"
+                  >
+                    Chi Tiết
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="app-hover-card-container app-background-img"
+                style="background-image: url(/assets/images/british.jpg)"
+              >
+                <div class="card-header">
+                  <h5>Anh</h5>
+                  <p class="m-0">2 Địa điểm</p>
+                </div>
+                <div
+                  class="card-body d-flex flex-column justify-content-center align-items-center"
+                >
+                  <h5 class="fw-bold mb-3">Địa điểm</h5>
+                  <a class="app-link link-light" href="#london">
+                    <h6 class="text-center">London</h6>
+                  </a>
+                  <a class="app-link link-light" href="#manchester">
+                    <h6 class="text-center">Manchester</h6>
+                  </a>
+                  <a
+                    class="btn btn-outline-light app-nav-button-outline mt-3"
+                    href="#tour/british"
+                  >
+                    Chi Tiết
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="app-hover-card-container app-background-img"
+                style="background-image: url(/assets/images/asia.jpg)"
+              >
+                <div class="card-header">
+                  <h5>Châu Á</h5>
+                  <p class="m-0">2 Địa điểm</p>
+                </div>
+                <div
+                  class="card-body d-flex flex-column justify-content-center align-items-center"
+                >
+                  <h5 class="fw-bold mb-3">Địa điểm</h5>
+                  <a class="app-link link-light" href="#hongkong">
+                    <h6 class="text-center">Hong Kong</h6>
+                  </a>
+                  <a class="app-link link-light" href="#china">
+                    <h6 class="text-center">Trung Quốc</h6>
+                  </a>
+                  <a class="app-link link-light" href="#korea">
+                    <h6 class="text-center">Hàn Quốc</h6>
+                  </a>
+                  <a
+                    class="btn btn-outline-light app-nav-button-outline mt-3"
+                    href="#tour/asia"
+                  >
+                    Chi Tiết
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="app-hover-card-container app-background-img"
+                style="background-image: url(/assets/images/europe.jpg)"
+              >
+                <div class="card-header">
+                  <h5>Châu Âu</h5>
+                  <p class="m-0">2 Địa điểm</p>
+                </div>
+                <div
+                  class="card-body d-flex flex-column justify-content-center align-items-center"
+                >
+                  <h5 class="fw-bold mb-3">Địa điểm</h5>
+                  <a class="app-link link-light" href="#netherlands">
+                    <h6 class="text-center">Hà Lan</h6>
+                  </a>
+                  <a class="app-link link-light" href="#spain">
+                    <h6 class="text-center">Tây Ban Nha</h6>
+                  </a>
+                  <a
+                    class="btn btn-outline-light app-nav-button-outline mt-3"
+                    href="#tour/asia"
+                  >
+                    Chi Tiết
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="app-hover-card-container app-background-img"
+                style="background-image: url(/assets/images/germany.jpg)"
+              >
+                <div class="card-header">
+                  <h5>Đức</h5>
+                  <p class="m-0">1 Địa điểm</p>
+                </div>
+                <div
+                  class="card-body d-flex flex-column justify-content-center align-items-center"
+                >
+                  <h5 class="fw-bold mb-3">Địa điểm</h5>
+                  <a class="app-link link-light" href="#berlin">
+                    <h6 class="text-center">Berlin</h6>
+                  </a>
+                  <a
+                    class="btn btn-outline-light app-nav-button-outline mt-3"
+                    href="#tour/europe"
+                  >
+                    Chi Tiết
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="section banner row app-background-img"
+          style="background-image: url('/assets/images/banner-background.jpg')"
+        >
+          <div class="col col-sm-12 col-md me-4">
+            <h1 style="font-size: 3rem" class="text-light text-end fw-bold">
+              Chuyến đi tiếp<br />theo của bạn
+            </h1>
+          </div>
+          <div class="col col-sm-12 col-md d-flex align-items-center">
+            <a class="btn btn-light" href="#tours"
+              ><span style="font-size: 16px">Khám phá tour</span></a
+            >
+          </div>
+        </section>
+
+        <section class="section container">
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <h5 style="text-transform: capitalize" class="fw-medium">
+                Tour theo đoàn
+              </h5>
+              <h3 class="fw-bold">Tour 2 ngày Vũng tàu</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                consequatur quas quam tempore labore cum saepe rem vitae.
+                Praesentium doloremque accusantium magnam cum ab sit nulla autem
+                aliquam reiciendis quo? Dolore laudantium ab, quae accusamus
+                doloribus autem repudiandae, optio non quaerat ipsa, nisi
+                incidunt eaque aperiam ea? Laboriosam sed blanditiis ipsam. Unde
+                totam praesentium sed, quibusdam omnis repellendus voluptas
+                eaque?
+              </p>
+              <p style="font-size: 1.5rem;"><span class="discount-price">2,450,000 VND</span> <span>2,150,000 VND</span></p>
+
+              <a class="btn btn-primary btn-lg" style="border-radius: 50px; padding: 10px 25px;" href="#vung-tau">CHI TIẾT</a>
+            </div>
+            <div class="col-12 col-lg-8">
+              <div
+                id="carousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+              >
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item app-slide active">
+                    <img class="d-block w-100" src="/assets/images/vietnam.jpg" alt="slide1" />
+                  </div>
+                  <div class="carousel-item app-slide">
+                    <img class="d-block w-100" src="/assets/images/europe.jpg" alt="slide1" />
+                  </div>
+                  <div class="carousel-item app-slide">
+                    <img class="d-block w-100" src="/assets/images/germany.jpg" alt="slide1" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section container">
+          <div class="bumper row">
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="d-flex gap-3">
+                <img src="/assets/images/world.png" width="64" height="64">
+                <div>
+                  <h4 class="fw-bold">Tour nước ngoài</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis alias quisquam praesentium voluptates nulla quo ducimus deserunt adipisci ad impedit omnis officia distinctio voluptatibus voluptas perspiciatis quia, sit iste? Maxime?</p>
+                  <a class="link app-link" href="#view-more">Xem thêm</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="d-flex gap-3">
+                <img src="/assets/images/cruise.png" width="64" height="64">
+                <div>
+                  <h4 class="fw-bold">Tour biển</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis alias quisquam praesentium voluptates nulla quo ducimus deserunt adipisci ad impedit omnis officia distinctio voluptatibus voluptas perspiciatis quia, sit iste? Maxime?</p>
+                  <a class="link app-link" href="#view-more">Xem thêm</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-4">
+              <div class="d-flex gap-3">
+                <img src="/assets/images/buildings.png" width="64" height="64">
+                <div>
+                  <h4 class="fw-bold">Tour thành phố</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis alias quisquam praesentium voluptates nulla quo ducimus deserunt adipisci ad impedit omnis officia distinctio voluptatibus voluptas perspiciatis quia, sit iste? Maxime?</p>
+                  <a class="link app-link" href="#view-more">Xem thêm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="footer"></div>
+    </div>
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/anime.min.js"></script>
+    <script src="/assets/js/lodash.js"></script>
+
+    <script src="/assets/js/script.js"></script>
+  </body>
 </html>
