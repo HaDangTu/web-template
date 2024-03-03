@@ -10,6 +10,9 @@ window.onload = () => {
   $('.app-card-link').hover(cardLinkHover('in'), cardLinkHover('out'));
 
   $('.app-hover-card-container').hover(cardHover('in'), cardHover('out'));
+
+  const date = new Date();
+  $('.copyright').html(`Copyright &#169; ${date.getFullYear()} Best Travel`);
 };
 
 window.onresize = _.debounce(() => {
