@@ -12,7 +12,7 @@ window.onload = () => {
   $('.app-hover-card-container').hover(cardHover('in'), cardHover('out'));
 
   const date = new Date();
-  $('.copyright').html(`Copyright &#169; ${date.getFullYear()} Best Travel`);
+  $('.copyright').html(`&#169; ${date.getFullYear()} All right reserve`);
 };
 
 window.onresize = _.debounce(() => {
@@ -46,6 +46,12 @@ function toggleSideMenu() {
   sideMenu.attr('data-menu-show', !isShow);
 }
 
+/**
+ * Handles the hover action for the card link.
+ *
+ * @param {string} action - The action to be performed on hover ('in' for hover in, 'out' for hover out).
+ * @return {function} The event handler function for the hover action.
+ */
 function cardLinkHover(action) {
   return (event) => {
     const { target } = event;
@@ -60,6 +66,12 @@ function cardLinkHover(action) {
   };
 }
 
+/**
+ * Handles the hover action for a card element.
+ *
+ * @param {string} action - the type of hover action, either 'in' or 'out'
+ * @return {function} a function to handle the hover event
+ */
 function cardHover(action) {
   return (event) => {
     const { target } = event;
