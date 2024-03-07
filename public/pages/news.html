@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Tin tức</title>
+  </head>
+  <body>
+    <div class="app">
+      <header id="header" class="header navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="app-nav-brand nav-brand" href="/">
+            <img src="/photos/f_webp/logo.png" width="160px" />
+          </a>
+          <button class="app-navbar-toggler" onclick="toggleSideMenu()">
+            <span class="material-symbols-rounded" style="color: #fff"
+              >menu</span
+            >
+          </button>
+
+          <nav
+            class="collapse navbar-collapse justify-content-center"
+            id="nav-header"
+          >
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a href="/" class="app-nav-link nav-link">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <div class="app-nav-link nav-link dropdown">
+                  <span data-bs-toggle="dropdown" aria-expanded="false"
+                    >Tours</span
+                  >
+                  <ul class="dropdown-menu" data-bs-popper="static">
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="#vietnam">Việt Nam</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="#thailan">Thái Lan</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="#asia">Châu Á</a>
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="#europe">Châu Âu</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="/pages/about.html" class="app-nav-link nav-link"
+                  >Giới Thiệu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/pages/news.html" class="app-nav-link nav-link active"
+                  >Tin Tức</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/pages/contact.html" class="app-nav-link nav-link"
+                  >Liên Hệ</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="hstack gap-2">
+            <button class="btn btn-outline-light app-nav-button-outline">
+              Login
+            </button>
+            <button class="btn btn-light">Sign Up</button>
+          </div>
+        </div>
+      </header>
+
+      <div class="main">
+        <aside id="side-menu" class="side-menu" data-menu-show="false">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="/" class="app-nav-link nav-link">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a href="/pages/about.html" class="app-nav-link nav-link"
+                >Giới Thiệu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/pages/news.html" class="app-nav-link nav-link active"
+                >Tin Tức</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="app-nav-link nav-link">Liên Hệ</a>
+            </li>
+          </ul>
+        </aside>
+        <section
+          class="header-section"
+          style="
+            padding: 200px 0 80px 0;
+            background-image: url('/photos/f_webp/beach.jpg');
+          "
+        >
+          <div class="container position-relative">
+            <h3 class="text-capitalize text-light position-absolute fw-bold">
+              Tin tức
+            </h3>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="row g-3">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="card flex-row" style="border: none;">
+                  <div class="col">
+                    <img
+                      class="img-fluid w-100 h-100"
+                      src="/photos/f_webp/germany.jpg"
+                    />
+                  </div>
+                  <div class="col">
+                    <div class="card-body" style="background-color: #52a9f0; padding: 30px;">
+                      <h6
+                        class="card-subtitle text-light text-uppercase fw-medium mb-2"
+                      >
+                        Travel tips
+                      </h6>
+                      <h5 class="card-title text-light fw-bold app-line-height_40">
+                        Cần chuẩn bị gì trước khi đi du lịch
+                      </h5>
+                      <p class="text-light mt-4 mb-3">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Dignissimos illum explicabo nihil a excepturi
+                        esse, optio sed...
+                      </p>
+                      <a
+                        href="/pages/news/travel_tips.html"
+                        class="btn btn-light"
+                        >Chi tiết</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="card flex-row" style="border: none;">
+                  <div class="col">
+                    <img
+                      class="img-fluid w-100 h-100"
+                      src="/photos/f_webp/vietnam.jpg"
+                    />
+                  </div>
+                  <div class="col">
+                    <div class="card-body" style="background-color: #52a9f0; padding: 30px;">
+                      <h6
+                        class="card-subtitle text-light text-uppercase fw-medium mb-2"
+                      >
+                        Travel tips
+                      </h6>
+                      <h5 class="card-title text-light fw-bold app-line-height_40">
+                        Tour theo đoàn được hình thành như thế...
+                      </h5>
+                      <p class="text-light mt-4 mb-3">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Dignissimos illum explicabo nihil a excepturi
+                        esse, optio sed...
+                      </p>
+                      <a
+                        href="/pages/news/group_tours.html"
+                        class="btn btn-light"
+                        >Chi tiết</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="card flex-row" style="border: none;">
+                  <div class="col">
+                    <img
+                      class="img-fluid w-100 h-100"
+                      src="/photos/f_webp/germany.jpg"
+                    />
+                  </div>
+                  <div class="col">
+                    <div class="card-body" style="background-color: #52a9f0; padding: 30px;">
+                      <h6
+                        class="card-subtitle text-light text-uppercase fw-medium mb-2"
+                      >
+                        Travel tips
+                      </h6>
+                      <h5 class="card-title text-light fw-bold app-line-height_40">
+                        Du lịch nước ngoài cần làm thủ tục gì
+                      </h5>
+                      <p class="text-light mt-4 mb-3">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Dignissimos illum explicabo nihil a excepturi
+                        esse, optio sed...
+                      </p>
+                      <a
+                        href="/pages/news/travel_procedures.html"
+                        class="btn btn-light"
+                        >Chi tiết</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="card flex-row" style="border: none;">
+                  <div class="col">
+                    <img
+                      class="img-fluid w-100 h-100"
+                      src="/photos/f_webp/thailand.jpg"
+                    />
+                  </div>
+                  <div class="col">
+                    <div class="card-body" style="background-color: #52a9f0; padding: 30px;">
+                      <h6
+                        class="card-subtitle text-light text-uppercase fw-medium mb-2"
+                      >
+                        Travel tips
+                      </h6>
+                      <h5 class="card-title text-light fw-bold app-line-height_40">
+                        Mùa này du lịch ở đâu
+                      </h5>
+                      <p class="text-light mt-4 mb-3">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Dignissimos illum explicabo nihil a excepturi
+                        esse, optio sed...
+                      </p>
+                      <a
+                        href="/pages/news/recomend_tours.html"
+                        class="btn btn-light"
+                        >Chi tiết</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="footer" class="footer container-fluid">
+        <div class="row mb-3">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+            <img src="/photos/f_webp/logo_2.png" width="160px" />
+            <p class="mt-3 text-light">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+              harum voluptas incidunt tempora quo molestias eaque facilis
+              eligendi doloremque aperiam, nostrum porro voluptates quos odio et
+              debitis! Blanditiis, aliquid in?
+            </p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-2 col-lg-2">
+            <h6 class="text-uppercase mb-3 text-light">Menu</h6>
+            <ul class="link-group text-light">
+              <li><a class="text-light" href="/">Trang chủ</a></li>
+              <li><a class="text-light" href="/about">Giới thiệu</a></li>
+              <li><a class="text-light" href="/contact">Liên hệ</a></li>
+              <li><a class="text-light" href="/tours">Tour</a></li>
+              <li><a class="text-light" href="/news">Tin tức</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-4 col-md-2 col-lg-2">
+            <h6 class="text-uppercase mb-3 text-light">Tour chúng tôi</h6>
+            <ul class="link-group text-light">
+              <li><a class="text-light" href="/">Việt Nam</a></li>
+              <li><a class="text-light" href="/about">Thái Lan</a></li>
+              <li><a class="text-light" href="/contact">Châu Á</a></li>
+              <li><a class="text-light" href="/tours">Châu Âu</a></li>
+              <li><a class="text-light" href="/news">Anh</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-4 col-md-2 col-lg-2">
+            <h6 class="text-uppercase mb-3 text-light">Tài khoản</h6>
+            <ul class="link-group text-light">
+              <li><a class="text-light" href="/">Tài khoản</a></li>
+              <li><a class="text-light" href="/about">Thanh toán</a></li>
+              <li><a class="text-light" href="/contact">Giỏ hàng</a></li>
+              <li><a class="text-light" href="/tours">Tour</a></li>
+              <li><a class="text-light" href="/news">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex mb-3 justify-content-between align-items-center">
+          <div class="d-flex gap-3">
+            <a class="d-inline-block" href="https://www.facebook.com/">
+              <img src="/photos/f_webp/facebook.png" alt="facebook" />
+            </a>
+            <a class="d-inline-block" href="https://www.youtube.com/">
+              <img src="/photos/f_webp/youtube.png" alt="youtube" />
+            </a>
+            <a class="d-inline-block" href="https://twitter.com">
+              <img src="/photos/f_webp/twitter.png" alt="twitter" />
+            </a>
+            <a class="d-inline-block" href="https://www.instagram.com/">
+              <img src="/photos/f_webp/instagram.png" alt="instagram" />
+            </a>
+          </div>
+          <p class="copyright m-0 text-light fst-italic"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/anime.min.js"></script>
+    <script src="/assets/js/lodash.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>
