@@ -12,6 +12,7 @@ const app = express();
 app.use('/photos', ipxMiddleware);
 
 app.use(express.static(path.join(__dirname, '../', 'public')));
+// app.use(express.static('C:\\Users\\Home\\Downloads\\Original_plan\\Original_plan'));
 
 app.listen(3000, () => {
   console.log('[INFO] Dev server start at: http://localhost:3000');
