@@ -232,3 +232,42 @@
 .app-line-height_40 {
   height: 40px;
 }
+
+.app-body-text {
+  font-size: 16px;
+  line-height: 1.75rem;
+  font-weight: normal;
+}
+
+div.tab {
+  display: none;
+}
+
+div.tab.active {
+  display: block;
+}
+
+.carousel-bottom-indicators {
+  position: relative;
+  justify-content: flex-start;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.carousel-img-indicator {
+  border: none !important;
+  outline: none !important;
+  width: 100% !important;
+  padding: 0 !important;
+  background-color: transparent !important;
+  margin-right: unset !important;
+  margin-left: unset !important;
+  text-indent: unset !important;
+  background-color: unset !important;
+  background-clip: unset !important;
+  opacity: 0.5;
+}
+
+.carousel-img-indicator.active {
+  opacity: 1;
+}

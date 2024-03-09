@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/global.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title id="title">Phố cổ Hội An</title>
+  </head>
+  <body>
+    <div class="app">
+      <header id="header" class="header navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <a class="app-nav-brand nav-brand" href="/">
+            <img src="/photos/f_webp/logo.png" width="160px" />
+          </a>
+          <button class="app-navbar-toggler" onclick="toggleSideMenu()">
+            <span class="material-symbols-rounded" style="color: #fff"
+              >menu</span
+            >
+          </button>
+
+          <nav
+            class="collapse navbar-collapse justify-content-center"
+            id="nav-header"
+          >
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a href="/" class="app-nav-link nav-link">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <div class="app-nav-link nav-link dropdown active">
+                  <span data-bs-toggle="dropdown" aria-expanded="false"
+                    >Tours</span
+                  >
+                  <ul class="dropdown-menu" data-bs-popper="static">
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="/pages/tour.html?loc=vietnam"
+                        >Việt Nam</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="/pages/tour.html?loc=thailand"
+                        >Thái Lan</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="/pages/tour.html?loc=asia"
+                        >Châu Á</a
+                      >
+                    </li>
+                    <li class="dropdown-item">
+                      <a class="nav-link" href="/pages/tour.html?loc=europe"
+                        >Châu Âu</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a href="/pages/about.html" class="app-nav-link nav-link"
+                  >Giới Thiệu</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/pages/news.html" class="app-nav-link nav-link"
+                  >Tin Tức</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="/pages/contact.html" class="app-nav-link nav-link"
+                  >Liên Hệ</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="hstack gap-2">
+            <button class="btn btn-outline-light app-nav-button-outline">
+              Login
+            </button>
+            <button class="btn btn-light">Sign Up</button>
+          </div>
+        </div>
+      </header>
+      <div class="main">
+        <aside id="side-menu" class="side-menu" data-menu-show="false">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="/" class="app-nav-link nav-link active">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a href="/pages/about.html" class="app-nav-link nav-link"
+                >Giới Thiệu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/pages/news.html" class="app-nav-link nav-link"
+                >Tin Tức</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/pages/contact.html" class="app-nav-link nav-link"
+                >Liên Hệ</a
+              >
+            </li>
+          </ul>
+        </aside>
+
+        <section
+          class="header-section"
+          style="
+            padding: 200px 0 80px 0;
+            background-image: url('/photos/f_webp/vietnam.jpg');
+          "
+        >
+          <div class="container position-relative">
+            <h3
+              id="location"
+              class="text-capitalize text-light position-absolute fw-bold"
+            >
+              Phố cổ Hội An
+            </h3>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container-md">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a class="app-link" href="/">Trang chủ</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="app-link" href="/pages/tour.html?loc=vietnam"
+                    >Việt Nam</a
+                  >
+                </li>
+                <li
+                  id="active-breadcrumb"
+                  class="breadcrumb-item"
+                  aria-current="page"
+                >
+                  Phố cổ Hội An
+                </li>
+              </ol>
+            </nav>
+
+            <div class="row">
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div id="carousel" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/vietnam.jpg"
+                        alt="vietnam"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/germany.jpg"
+                        alt="germany"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/british.jpg"
+                        alt="british"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/europe.jpg"
+                        alt="europe"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carousel"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carousel"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+
+                  <div
+                    class="carousel-indicators mt-2 gap-2 carousel-bottom-indicators"
+                  >
+                    <button
+                      class="carousel-img-indicator active"
+                      data-bs-target="#carousel"
+                      data-bs-slide-to="0"
+                      aria-label="slide 1"
+                      aria-current="true"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/vietnam.jpg"
+                        alt="vietnam"
+                      />
+                    </button>
+
+                    <button
+                      class="carousel-img-indicator"
+                      data-bs-target="#carousel"
+                      data-bs-slide-to="1"
+                      aria-label="slide 2"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/germany.jpg"
+                        alt="germany"
+                      />
+                    </button>
+
+                    <button
+                      class="carousel-img-indicator"
+                      data-bs-target="#carousel"
+                      data-bs-slide-to="2"
+                      aria-label="slide 3"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/british.jpg"
+                        alt="british"
+                      />
+                    </button>
+
+                    <button
+                      class="carousel-img-indicator"
+                      data-bs-target="#carousel"
+                      data-bs-slide-to="3"
+                      aria-label="slide 4"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/europe.jpg"
+                        alt="europe"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <h3 class="mb-4">Phố cổ Hội An</h3>
+                <h4>
+                  <span class="discount-price">2,400,000<sup>đ</sup></span
+                  >&nbsp;&nbsp;&nbsp;<span class="fw-bold"
+                    >2,150,000<sup>đ</sup></span
+                  >
+                </h4>
+                <p class="mt-4 app-body-text">
+                  <strong>Lorem ipsum </strong>dolor sit amet consectetur
+                  adipisicing elit. Nostrum porro ullam corrupti. Quaerat
+                  laborum, odio possimus repellat minima voluptatum veritatis
+                  omnis, sed non, voluptates ipsa. Accusamus aliquid amet
+                  voluptatibus cum. Quidem magni corporis quasi dolor cupiditate
+                  aut minima necessitatibus quibusdam? Corrupti explicabo atque,
+                  rerum modi reprehenderit commodi ipsum reiciendis voluptates
+                  hic molestiae omnis quos minus, laudantium facere! Cumque,
+                  ipsum exercitationem!
+                </p>
+                <a
+                  class="btn btn-primary text-uppercase"
+                  href="/pages/book-tour.html"
+                  >Đặt tour</a
+                >
+                <div class="mt-4 d-flex flex-wrap gap-2">
+                  <p class="m-0 fw-medium">Danh mục:</p>
+                  <a
+                    class="app-link badge text-bg-secondary"
+                    href="/pages/tour.html?loc=vietnam"
+                    >Việt Nam</a
+                  >
+                  <a
+                    class="app-link badge text-bg-secondary"
+                    href="/pages/tour.html?loc=asia"
+                    >Châu Á</a
+                  >
+                  <a
+                    class="app-link badge text-bg-secondary"
+                    href="/pages/tour.html?loc=vietnam"
+                    >Hàn Quốc</a
+                  >
+                  <a
+                    class="app-link badge text-bg-secondary"
+                    href="/pages/tour.html?loc=asia"
+                    >Châu Âu</a
+                  >
+                  <a
+                    class="app-link badge text-bg-secondary"
+                    href="/pages/tour.html?loc=vietnam"
+                    >Anh</a
+                  >
+                  <a
+                    class="app-link badge text-bg-secondary"
+                    href="/pages/tour.html?loc=asia"
+                    >Pháp</a
+                  >
+                  <a
+                    class="app-link badge text-bg-secondary"
+                    href="/pages/tour.html?loc=vietnam"
+                    >Đức</a
+                  >
+                  <a
+                    class="app-link badge text-bg-secondary"
+                    href="/pages/tour.html?loc=asia"
+                    >Tây Ban Nha</a
+                  >
+                  <a
+                    class="app-link badge text-bg-secondary"
+                    href="/pages/tour.html?loc=vietnam"
+                    >Hà Lan</a
+                  >
+                  <a
+                    class="app-link badge text-bg-secondary"
+                    href="/pages/tour.html?loc=asia"
+                    >Đức</a
+                  >
+                </div>
+                <div class="mt-3 d-flex flex-wrap gap-2">
+                  <p class="m-0 fw-medium">Từ Khóa:</p>
+                  <a class="app-link badge text-bg-secondary" href="/"
+                    >Du lịch</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container-md">
+            <ul class="nav nav-tabs mb-4">
+              <li class="nav-item">
+                <button
+                  class="tab nav-link active"
+                  data-active-tab="description-tab"
+                  onclick="onTabClick(event)"
+                >
+                  Mô tả
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="tab nav-link"
+                  data-active-tab="review-tab"
+                  onclick="onTabClick(event)"
+                >
+                  Đánh giá(0)
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab active" id="description-tab">
+              <h4 class="mb-4">Mô tả</h4>
+              <h3 class="mb-4">Đây là mô tả mẫu về tour này</h3>
+              <p class="app-body-text">
+                <strong>Lorem Ipsum</strong> chỉ đơn giản là một đoạn văn bản
+                giả, được dùng vào việc trình bày và dàn trang phục vụ cho in
+                ấn. Lorem Ipsum đã được sử dụng như một văn bản chuẩn cho ngành
+                công nghiệp in ấn từ những năm 1500, khi một họa sĩ vô danh ghép
+                nhiều đoạn văn bản với nhau để tạo thành một bản mẫu văn bản.
+                Đoạn văn bản này không những đã tồn tại năm thế kỉ, mà khi được
+                áp dụng vào tin học văn phòng, nội dung của nó vẫn không hề bị
+                thay đổi. Nó đã được phổ biến trong những năm 1960 nhờ việc bán
+                những bản giấy Letraset in những đoạn Lorem Ipsum, và gần đây
+                hơn, được sử dụng trong các ứng dụng dàn trang, như Aldus
+                PageMaker.
+              </p>
+
+              <img
+                class="img-fluid mb-3"
+                src="/photos/f_webp/mountain.jpg"
+                alt="mountain"
+              />
+              <h5 class="mb-3">Nó đến từ đâu?</h5>
+              <p class="app-body-text mb-3">
+                Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ
+                là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của
+                nó từ những tác phẩm văn học la-tinh cổ điển xuất hiện từ năm 45
+                trước Công Nguyên, nghĩa là nó đã có khoảng hơn 2000 tuổi. Một
+                giáo sư của trường Hampden-Sydney College (bang Virginia – Mỹ)
+                quan tâm tới một trong những từ la-tinh khó hiểu nhất,
+                “consectetur”, trích từ một đoạn của Lorem Ipsum, và đã nghiên
+                cứu tất cả các ứng dụng của từ này trong văn học cổ điển, để từ
+                đó tìm ra nguồn gốc không thể chối cãi của Lorem Ipsum. Thật ra,
+                nó được tìm thấy trong các đoạn 1.10.32 và 1.10.33 của “De
+                Finibus Bonorum et Malorum” (Đỉnh tối thượng của Cái Tốt và Cái
+                Xấu) viết bởi Cicero vào năm 45 trước Công Nguyên. Cuốn sách này
+                là một luận thuyết đạo lí rất phổ biến trong thời kì Phục Hưng.
+                Dòng đầu tiên của Lorem Ipsum, “Lorem ipsum dolor sit amet…”
+                được trích từ một câu trong đoạn thứ 1.10.32. Trích đoạn chuẩn
+                của Lorem Ipsum được sử dụng từ thế kỉ thứ 16 và được tái bản
+                sau đó cho những người quan tâm đến nó. Đoạn 1.10.32 và 1.10.33
+                trong cuốn “De Finibus Bonorum et Malorum” của Cicero cũng được
+                tái bản lại theo đúng cấu trúc gốc, kèm theo phiên bản tiếng Anh
+                được dịch bởi H. Rackham vào năm 1914.
+              </p>
+              <img
+                class="img-fluid mb-3"
+                src="/photos/f_webp/germany.jpg"
+                alt="germany"
+              />
+              <h5 class="mb-3">Làm sao để có nó?</h5>
+              <p class="app-body-text">
+                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy,
+                nhưng đa số được biến đổi bằng cách thêm các yếu tố hài hước,
+                các từ ngẫu nhiên có khi không có vẻ gì là có ý nghĩa. Nếu bạn
+                định sử dụng một đoạn Lorem Ipsum, bạn nên kiểm tra kĩ để chắn
+                chắn là không có gì nhạy cảm được giấu ở giữa đoạn văn bản. Tất
+                cả các công cụ sản xuất văn bản mẫu Lorem Ipsum đều được làm
+                theo cách lặp đi lặp lại các đoạn chữ cho tới đủ thì thôi, khiến
+                cho lipsum.com trở thành công cụ sản xuất Lorem Ipsum đáng giá
+                nhất trên mạng. Trang web này sử dụng hơn 200 từ la-tinh, kết
+                hợp thuần thục nhiều cấu trúc câu để tạo ra văn bản Lorem Ipsum
+                trông có vẻ thật sự hợp lí. Nhờ thế, văn bản Lorem Ipsum được
+                tạo ra mà không cần một sự lặp lại nào, cũng không cần chèn thêm
+                các từ ngữ hóm hỉnh hay thiếu trật tự.
+              </p>
+            </div>
+            <div class="tab" id="review-tab">
+              <h4 class="mb-5">Đánh giá</h4>
+              <p style="line-height: 1.75rem">
+                Chưa có đánh giá nào <br />
+                Hãy là người đầu tiên nhận xét "Phố cổ Hội An"<br />
+                Email của bạn sẽ không được hiển thị công khai. Các trường bắt
+                buộc được đánh dấu *
+              </p>
+              <p>Đánh giá của bạn</p>
+              <!-- rating bar here -->
+
+              <form>
+                <div class="form-group mb-3">
+                  <label class="form-label" for="comment">
+                    Nhận xét của bạn <sup class="text-danger">*</sup>
+                  </label>
+                  <textarea
+                    id="comment"
+                    class="form-control"
+                    rows="5"
+                  ></textarea>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label class="form-label" for="name">
+                    Tên <sup class="text-danger">*</sup>
+                  </label>
+                  <input id="name" class="form-control" />
+                </div>
+
+                <div class="form-group mb-3">
+                  <label class="form-label" for="email">
+                    Email <sup class="text-danger">*</sup>
+                  </label>
+                  <input id="email" class="form-control" />
+                </div>
+
+                <button type="button" class="btn btn-primary text-capitalize">
+                  Gửi
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container-fluid">
+            <div class="container">
+              <h3 class="mb-3 container">Sản phẩm tương tự</h3>
+            </div>
+            <div
+              class="d-flex mt-4 flex-wrap gap-3 justify-content-center align-items-start"
+            >
+              <div
+                class="app-card shadow"
+                style="width: 300px; min-height: 400px"
+              >
+                <a
+                  class="d-block position-relative card-img"
+                  href="/pages/tour-details.html?detail=hoi_an"
+                >
+                  <img src="/photos/f_webp/vietnam.jpg" class="w-100 h-100" />
+                  <span
+                    class="badge app-badge text-bg-primary fs-6 text-capitalize"
+                    >Giảm giá!</span
+                  >
+                </a>
+                <div class="card-body">
+                  <h4 class="mb-3">Phố cổ Hội An</h4>
+                  <p>
+                    <span class="discount-price">2,400,000<sup>đ</sup></span>
+                    <span>2,150,000<sup>đ</sup></span>
+                  </p>
+                  <a
+                    href="#book-tour"
+                    class="btn btn-outline-primary text-capitalize"
+                    >Đặt tour</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="app-card shadow"
+                style="width: 300px; min-height: 400px"
+              >
+                <a
+                  class="d-block position-relative card-img"
+                  href="/pages/tour-details.html?detail=hoi_an"
+                >
+                  <img src="/photos/f_webp/vietnam.jpg" class="w-100 h-100" />
+                  <span
+                    class="badge app-badge text-bg-primary fs-6 text-capitalize"
+                    >Giảm giá!</span
+                  >
+                </a>
+                <div class="card-body">
+                  <h4 class="mb-3">Tour 2 ngày Vũng Tàu</h4>
+                  <p>
+                    <span class="discount-price">2,400,000<sup>đ</sup></span>
+                    <span>2,150,000<sup>đ</sup></span>
+                  </p>
+                  <a
+                    href="#book-tour"
+                    class="btn btn-outline-primary text-capitalize"
+                    >Đặt tour</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="app-card shadow"
+                style="width: 300px; min-height: 400px"
+              >
+                <a
+                  class="d-block position-relative card-img"
+                  href="/pages/tour-details.html?detail=hoi_an"
+                >
+                  <img src="/photos/f_webp/vietnam.jpg" class="w-100 h-100" />
+                  <span
+                    class="badge app-badge text-bg-primary fs-6 text-capitalize"
+                    >Giảm giá!</span
+                  >
+                </a>
+                <div class="card-body">
+                  <h4 class="mb-3">Bến Ninh Kiều Cần Thơ</h4>
+                  <p>
+                    <span class="discount-price">2,400,000<sup>đ</sup></span>
+                    <span>2,150,000<sup>đ</sup></span>
+                  </p>
+                  <a
+                    href="#book-tour"
+                    class="btn btn-outline-primary text-capitalize"
+                    >Đặt tour</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="app-card shadow"
+                style="width: 300px; min-height: 400px"
+              >
+                <a
+                  class="d-block position-relative card-img"
+                  href="/pages/tour-details.html?detail=hoi_an"
+                >
+                  <img src="/photos/f_webp/vietnam.jpg" class="w-100 h-100" />
+                  <span
+                    class="badge app-badge text-bg-primary fs-6 text-capitalize"
+                    >Giảm giá!</span
+                  >
+                </a>
+                <div class="card-body">
+                  <h4 class="mb-3">Bangkok Thái Lan</h4>
+                  <p>
+                    <span class="discount-price">2,400,000<sup>đ</sup></span>
+                    <span>2,150,000<sup>đ</sup></span>
+                  </p>
+                  <a
+                    href="#book-tour"
+                    class="btn btn-outline-primary text-capitalize"
+                    >Đặt tour</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="app-card shadow"
+                style="width: 300px; min-height: 400px"
+              >
+                <a
+                  class="d-block position-relative card-img"
+                  href="/pages/tour-details.html?detail=hoi_an"
+                >
+                  <img src="/photos/f_webp/vietnam.jpg" class="w-100 h-100" />
+                  <span
+                    class="badge app-badge text-bg-primary fs-6 text-capitalize"
+                    >Giảm giá!</span
+                  >
+                </a>
+                <div class="card-body">
+                  <h4 class="mb-3">Địa đạo Củ Chi</h4>
+                  <p>
+                    <span class="discount-price">2,400,000<sup>đ</sup></span>
+                    <span>2,150,000<sup>đ</sup></span>
+                  </p>
+                  <a
+                    href="#book-tour"
+                    class="btn btn-outline-primary text-capitalize"
+                    >Đặt tour</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="app-card shadow"
+                style="width: 300px; min-height: 400px"
+              >
+                <a
+                  class="d-block position-relative card-img"
+                  href="/pages/tour-details.html?detail=hoi_an"
+                >
+                  <img src="/photos/f_webp/vietnam.jpg" class="w-100 h-100" />
+                  <span
+                    class="badge app-badge text-bg-primary fs-6 text-capitalize"
+                    >Giảm giá!</span
+                  >
+                </a>
+                <div class="card-body">
+                  <h4 class="mb-3">Hà Nội</h4>
+                  <p>
+                    <span class="discount-price">2,400,000<sup>đ</sup></span>
+                    <span>2,150,000<sup>đ</sup></span>
+                  </p>
+                  <a
+                    href="#book-tour"
+                    class="btn btn-outline-primary text-capitalize"
+                    >Đặt tour</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="app-card shadow"
+                style="width: 300px; min-height: 400px"
+              >
+                <a
+                  class="d-block position-relative card-img"
+                  href="/pages/tour-details.html?detail=hoi_an"
+                >
+                  <img src="/photos/f_webp/vietnam.jpg" class="w-100 h-100" />
+                  <span
+                    class="badge app-badge text-bg-primary fs-6 text-capitalize"
+                    >Giảm giá!</span
+                  >
+                </a>
+                <div class="card-body">
+                  <h4 class="mb-3">Vĩnh Long</h4>
+                  <p>
+                    <span class="discount-price">2,400,000<sup>đ</sup></span>
+                    <span>2,150,000<sup>đ</sup></span>
+                  </p>
+                  <a
+                    href="#book-tour"
+                    class="btn btn-outline-primary text-capitalize"
+                    >Đặt tour</a
+                  >
+                </div>
+              </div>
+
+              <div
+                class="app-card shadow"
+                style="width: 300px; min-height: 400px"
+              >
+                <a
+                  class="d-block position-relative card-img"
+                  href="/pages/tour-details.html?detail=hoi_an"
+                >
+                  <img src="/photos/f_webp/vietnam.jpg" class="w-100 h-100" />
+                  <span
+                    class="badge app-badge text-bg-primary fs-6 text-capitalize"
+                    >Giảm giá!</span
+                  >
+                </a>
+                <div class="card-body">
+                  <h4 class="mb-3">Vịnh Hạ Long</h4>
+                  <p>
+                    <span class="discount-price">2,400,000<sup>đ</sup></span>
+                    <span>2,150,000<sup>đ</sup></span>
+                  </p>
+                  <a
+                    href="#book-tour"
+                    class="btn btn-outline-primary text-capitalize"
+                    >Đặt tour</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div id="footer" class="footer container-fluid">
+        <div class="row mb-3">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+            <img src="/photos/f_webp/logo_2.png" width="160px" />
+            <p class="mt-3 text-light">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
+              harum voluptas incidunt tempora quo molestias eaque facilis
+              eligendi doloremque aperiam, nostrum porro voluptates quos odio et
+              debitis! Blanditiis, aliquid in?
+            </p>
+          </div>
+          <div class="col-12 col-sm-4 col-md-2 col-lg-2">
+            <h6 class="text-uppercase mb-3 text-light">Menu</h6>
+            <ul class="link-group text-light">
+              <li><a class="text-light" href="/">Trang chủ</a></li>
+              <li><a class="text-light" href="/about">Giới thiệu</a></li>
+              <li><a class="text-light" href="/contact">Liên hệ</a></li>
+              <li><a class="text-light" href="/tours">Tour</a></li>
+              <li><a class="text-light" href="/news">Tin tức</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-4 col-md-2 col-lg-2">
+            <h6 class="text-uppercase mb-3 text-light">Tour chúng tôi</h6>
+            <ul class="link-group text-light">
+              <li><a class="text-light" href="/">Việt Nam</a></li>
+              <li><a class="text-light" href="/about">Thái Lan</a></li>
+              <li><a class="text-light" href="/contact">Châu Á</a></li>
+              <li><a class="text-light" href="/tours">Châu Âu</a></li>
+              <li><a class="text-light" href="/news">Anh</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-sm-4 col-md-2 col-lg-2">
+            <h6 class="text-uppercase mb-3 text-light">Tài khoản</h6>
+            <ul class="link-group text-light">
+              <li><a class="text-light" href="/">Tài khoản</a></li>
+              <li><a class="text-light" href="/about">Thanh toán</a></li>
+              <li><a class="text-light" href="/contact">Giỏ hàng</a></li>
+              <li><a class="text-light" href="/tours">Tour</a></li>
+              <li><a class="text-light" href="/news">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex mb-3 justify-content-between align-items-center">
+          <div class="d-flex gap-3">
+            <a class="d-inline-block" href="https://www.facebook.com/">
+              <img src="/photos/f_webp/facebook.png" alt="facebook" />
+            </a>
+            <a class="d-inline-block" href="https://www.youtube.com/">
+              <img src="/photos/f_webp/youtube.png" alt="youtube" />
+            </a>
+            <a class="d-inline-block" href="https://twitter.com">
+              <img src="/photos/f_webp/twitter.png" alt="twitter" />
+            </a>
+            <a class="d-inline-block" href="https://www.instagram.com/">
+              <img src="/photos/f_webp/instagram.png" alt="instagram" />
+            </a>
+          </div>
+          <p class="copyright m-0 text-light fst-italic"></p>
+        </div>
+      </div>
+
+      <script src="/assets/js/jquery-3.7.1.min.js"></script>
+      <script src="/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="/assets/js/anime.min.js"></script>
+      <script src="/assets/js/lodash.js"></script>
+
+      <script src="/assets/js/script.js"></script>
+    </div>
+  </body>
+</html>

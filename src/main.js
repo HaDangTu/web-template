@@ -13,6 +13,7 @@ app.use('/photos', ipxMiddleware);
 
 app.use(express.static(path.join(__dirname, '../', 'public')));
 
+
 app.listen(3000, () => {
   console.log('[INFO] Dev server start at: http://localhost:3000');
 });

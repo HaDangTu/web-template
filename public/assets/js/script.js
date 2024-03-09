@@ -1,9 +1,17 @@
+const LOCATIONS = {
+  vietnam: 'Việt Nam',
+  thailand: 'Thái Lan',
+  asia: 'Châu Á',
+  europe: 'Châu Âu',
+};
+
 window.onload = () => {
   const headerElement = $('#header');
   const headerHeight = parseInt(
     headerElement.css('height').replace(/[a-zA-z]/g, ''),
     10
   );
+  updateTitleAndBreadcrumb();
 
   $('#side-menu').css('top', headerHeight);
 
@@ -82,7 +90,52 @@ function cardHover(action) {
       targets: cardBody,
       opacity,
       duration: 500,
-      easing: 'easeInOutSine'
+      easing: 'easeInOutSine',
     });
   };
+}
+
+function isTourPage() {
+  return (
+    $('#title').length > 0 &&
+    $('#active-breadcrumb').length > 0 &&
+    $('#location').length > 0
+  );
+}
+
+function updateTitleAndBreadcrumb() {
+  if (isTourPage()) {
+    const params = new URLSearchParams(document.location.search);
+    const loc = params.get('loc');
+    if (!loc) return;
+
+    const name = _.capitalize(LOCATIONS[loc] || '');
+
+    if (name) {
+      $('#title').text(name);
+      $('#location').text(name);
+      $('#active-breadcrumb').text(name);
+    }  
+  }
+}
+
+function onTabClick(event) {
+  const { target } = event;
+  $('.tab').removeClass('active');
+  $(target).addClass('active');
+
+  const activeTabId = $(target).attr('data-active-tab');
+
+  $(`#${activeTabId}`).addClass('active');
+}
+
+// function initalizeBootstrapCarousel() {
+//   new bootstrap.Carousel('#carousel', {
+//     interval: 3000,
+//     touch: false,
+//   });
+// }
+
+function onCarouselItemClick() {
+  console.log('Carousel item clicked');
 }
