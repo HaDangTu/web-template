@@ -153,7 +153,121 @@
             </nav>
 
             <div class="row">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6"></div>
+              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div id="carousel" class="carousel slide">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/vietnam.jpg"
+                        alt="vietnam"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/germany.jpg"
+                        alt="germany"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/british.jpg"
+                        alt="british"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/europe.jpg"
+                        alt="europe"
+                      />
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#carousel"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#carousel"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+
+                  <div
+                    class="carousel-indicators mt-2 gap-2 carousel-bottom-indicators"
+                  >
+                    <button
+                      class="carousel-img-indicator active"
+                      data-bs-target="#carousel"
+                      data-bs-slide-to="0"
+                      aria-label="slide 1"
+                      aria-current="true"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/vietnam.jpg"
+                        alt="vietnam"
+                      />
+                    </button>
+
+                    <button
+                      class="carousel-img-indicator"
+                      data-bs-target="#carousel"
+                      data-bs-slide-to="1"
+                      aria-label="slide 2"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/germany.jpg"
+                        alt="germany"
+                      />
+                    </button>
+
+                    <button
+                      class="carousel-img-indicator"
+                      data-bs-target="#carousel"
+                      data-bs-slide-to="2"
+                      aria-label="slide 3"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/british.jpg"
+                        alt="british"
+                      />
+                    </button>
+
+                    <button
+                      class="carousel-img-indicator"
+                      data-bs-target="#carousel"
+                      data-bs-slide-to="3"
+                      aria-label="slide 4"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="/photos/f_webp/europe.jpg"
+                        alt="europe"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
               <div class="col-12 col-sm-12 col-md-6 col-lg-6">
                 <h3 class="mb-4">Phố cổ Hội An</h3>
                 <h4>
@@ -334,10 +448,11 @@
             </div>
             <div class="tab" id="review-tab">
               <h4 class="mb-5">Đánh giá</h4>
-              <p style="line-height: 1.75rem;">
-                Chưa có đánh giá nào <br>
-                Hãy là người đầu tiên nhận xét "Phố cổ Hội An"<br>
-                Email của bạn sẽ không được hiển thị công khai. Các trường bắt buộc được đánh dấu *
+              <p style="line-height: 1.75rem">
+                Chưa có đánh giá nào <br />
+                Hãy là người đầu tiên nhận xét "Phố cổ Hội An"<br />
+                Email của bạn sẽ không được hiển thị công khai. Các trường bắt
+                buộc được đánh dấu *
               </p>
               <p>Đánh giá của bạn</p>
               <!-- rating bar here -->
@@ -347,24 +462,30 @@
                   <label class="form-label" for="comment">
                     Nhận xét của bạn <sup class="text-danger">*</sup>
                   </label>
-                  <textarea id="comment" class="form-control" rows="5"></textarea>
+                  <textarea
+                    id="comment"
+                    class="form-control"
+                    rows="5"
+                  ></textarea>
                 </div>
 
                 <div class="form-group mb-3">
                   <label class="form-label" for="name">
                     Tên <sup class="text-danger">*</sup>
                   </label>
-                  <input id="name" class="form-control">
+                  <input id="name" class="form-control" />
                 </div>
 
                 <div class="form-group mb-3">
                   <label class="form-label" for="email">
                     Email <sup class="text-danger">*</sup>
                   </label>
-                  <input id="email" class="form-control">
+                  <input id="email" class="form-control" />
                 </div>
 
-                <button type="button" class="btn btn-primary text-capitalize">Gửi</button>
+                <button type="button" class="btn btn-primary text-capitalize">
+                  Gửi
+                </button>
               </form>
             </div>
           </div>
@@ -668,6 +789,7 @@
       </div>
 
       <script src="/assets/js/jquery-3.7.1.min.js"></script>
+      <!-- <script src="/assets/js/bootstrap.min.js"></script> -->
       <script src="/assets/js/bootstrap.bundle.min.js"></script>
       <script src="/assets/js/anime.min.js"></script>
       <script src="/assets/js/lodash.js"></script>

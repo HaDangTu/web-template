@@ -105,7 +105,6 @@ function isTourPage() {
 
 function updateTitleAndBreadcrumb() {
   if (isTourPage()) {
-    console.log('Tour page');
     const params = new URLSearchParams(document.location.search);
     const loc = params.get('loc');
     if (!loc) return;
@@ -128,4 +127,15 @@ function onTabClick(event) {
   const activeTabId = $(target).attr('data-active-tab');
 
   $(`#${activeTabId}`).addClass('active');
+}
+
+// function initalizeBootstrapCarousel() {
+//   new bootstrap.Carousel('#carousel', {
+//     interval: 3000,
+//     touch: false,
+//   });
+// }
+
+function onCarouselItemClick() {
+  console.log('Carousel item clicked');
 }
