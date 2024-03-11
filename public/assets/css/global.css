@@ -1,6 +1,11 @@
-/* Your global style here */
+@import url('fonts.css');
+
 html, body {
   height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, a, p, span, label, input, button {
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
 }
 
 * {
