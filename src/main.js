@@ -11,7 +11,12 @@ const app = express();
 
 app.use('/photos', ipxMiddleware);
 
-app.use(express.static(path.join(__dirname, '../', 'public')));
+app.use(express.static(path.join(__dirname, '../', 'public')), (req, res, next) => {
+  if (!req.statusCode) {
+    res.redirect('http://localhost:3000/404.html');
+  }
+  next();
+});
 
 
 app.listen(3000, () => {

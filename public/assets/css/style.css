@@ -1,4 +1,162 @@
 /* Your style here */
 .app {
   height: inherit;
+  position: relative;
 }
+
+.app-name {
+  display: none;
+}
+
+.header .caption {
+  margin-top: 200px;
+}
+
+.app-link {
+  text-decoration: none;
+}
+
+.app-link:hover {
+  color: var(--bs-primary) !important;
+}
+
+.app-link.active {
+  color: var(--bs-primary) !important;
+}
+
+.app-navbar {
+  height: 70px; /* header height */
+  border-radius: 35px;
+  background-color: var(--bs-dark);
+}
+
+.app-navbar .app-logo {
+  padding: 20px;
+  border-radius: 50%;
+  background-color: var(--bs-dark);
+}
+
+.app-dropdown {
+  position: relative;
+}
+
+.app-dropdown:hover .dropdown-menu{
+  display: block;
+}
+
+.app-background-img {
+  background-size: cover;
+  background-position: center;
+}
+
+.app-navbar .app-nav-action-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.app-icon-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
+  line-height: 1;
+}
+
+.app-divider.vertical {
+  background-color: var(--bs-gray-400);
+  width: 2px;
+  height: 15px;
+  border-radius: 1px;
+}
+
+.app-icon {
+  line-height: unset;
+}
+
+.app-btn-close {
+  position: absolute;
+  top: 10px; 
+  right: 10px;
+}
+
+.modal.fade .app-side-menu-drawer.modal-dialog {
+  margin: 0;
+  transform: translate(-50px, 0);
+}
+
+.modal.show .app-side-menu-drawer.modal-dialog {
+  transform: none;
+}
+
+.modal .app-side-menu-drawer {
+  height: 100% !important;
+}
+
+.modal .app-side-menu-drawer .accordion-item {
+  background-color: transparent;
+  border: none;
+}
+
+.modal.fade .app-side-menu-drawer .accordion-item .accordion-body {
+  padding: 0;
+}
+
+.modal .app-side-menu-drawer .side-menu-header {
+  padding: 20px 50px;
+  background-color: var(--bs-dark);
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.modal .app-side-menu-drawer .side-menu-inner {
+  list-style-type: none;
+  height: 100%;
+  padding: 20px 10px;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.modal .app-side-menu-drawer .side-menu-inner > li {
+  margin-bottom: 10px;
+}
+
+.modal .app-side-menu-drawer .side-menu-inner > li:last-child {
+  margin-bottom: 0;
+}
+
+.modal .app-side-menu-drawer .side-menu-inner .side-menu-item .side-menu-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.modal .app-side-menu-drawer .side-menu-inner .side-menu-item .side-menu-link.active, 
+.modal .app-side-menu-drawer .side-menu-inner .side-menu-item .side-menu-link:hover {
+  background-color: var(--bs-primary-border-subtle);
+}
+
+@media screen and (max-width: 992px) {
+  .app-name {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .mobile-toggler {
+    display: none;
+  }
+
+  .mobile-text {
+    width: 100% !important;
+  }
+}
+
