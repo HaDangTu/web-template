@@ -144,9 +144,32 @@
   background-color: var(--bs-primary-border-subtle);
 }
 
+.footer {
+  background-color: var(--bs-dark);
+  padding: 50px 0;
+}
+
+.footer .follow-us {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.app-link-group {
+  list-style-type: none;
+  padding: 0;
+}
+
 @media screen and (max-width: 992px) {
   .app-name {
     display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer .follow-us {
+    position: relative;
+    margin-top: 40px;
   }
 }
 
