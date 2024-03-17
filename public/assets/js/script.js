@@ -10,7 +10,7 @@ const toggleModal = (idSelector, options) => {
   }
 };
 
-const toggleModalHandler = toggleModal('#search-modal');
+const toggleSearchModal = toggleModal('#search-modal');
 
 const toggleExpandCollapse = (event) => {
   const { target } = event;
@@ -21,4 +21,6 @@ const toggleExpandCollapse = (event) => {
   icon.text(isExpanded ? 'remove' : 'add');
 }
 
-const toggleSidemenuHandler = toggleModal('#side-menu');
+const toggleSidemenuModal = toggleModal('#side-menu');
+
+const toggleImageModal = toggleModal('#image-modal');
