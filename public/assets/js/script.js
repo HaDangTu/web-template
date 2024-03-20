@@ -11,7 +11,6 @@ window.onload = () => {
     headerElement.css('height').replace(/[a-zA-z]/g, ''),
     10
   );
-  updateTitleAndBreadcrumb();
 
   $('#side-menu').css('top', headerHeight);
 
@@ -103,22 +102,6 @@ function isTourPage() {
   );
 }
 
-function updateTitleAndBreadcrumb() {
-  if (isTourPage()) {
-    const params = new URLSearchParams(document.location.search);
-    const loc = params.get('loc');
-    if (!loc) return;
-
-    const name = _.capitalize(LOCATIONS[loc] || '');
-
-    if (name) {
-      $('#title').text(name);
-      $('#location').text(name);
-      $('#active-breadcrumb').text(name);
-    }  
-  }
-}
-
 function onTabClick(event) {
   const { target } = event;
   $('.tab').removeClass('active');
@@ -129,13 +112,3 @@ function onTabClick(event) {
   $(`#${activeTabId}`).addClass('active');
 }
 
-// function initalizeBootstrapCarousel() {
-//   new bootstrap.Carousel('#carousel', {
-//     interval: 3000,
-//     touch: false,
-//   });
-// }
-
-function onCarouselItemClick() {
-  console.log('Carousel item clicked');
-}
