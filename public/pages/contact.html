@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
@@ -13,7 +12,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <title>Tin tức</title>
+    <title id="title">Liên Hệ</title>
   </head>
   <body>
     <div class="app">
@@ -37,22 +36,30 @@
                 <a href="/" class="app-nav-link nav-link">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <div class="app-nav-link nav-link dropdown">
+                <div class="app-nav-link nav-link dropdown active">
                   <span data-bs-toggle="dropdown" aria-expanded="false"
                     >Tours</span
                   >
                   <ul class="dropdown-menu" data-bs-popper="static">
                     <li class="dropdown-item">
-                      <a class="nav-link" href="/pages/tours/vietnam.html">Việt Nam</a>
+                      <a class="nav-link" href="/pages/tours/vietnam.html"
+                        >Việt Nam</a
+                      >
                     </li>
                     <li class="dropdown-item">
-                      <a class="nav-link" href="/pages/tours/thailand.html">Thái Lan</a>
+                      <a class="nav-link" href="/pages/tours/thailand.html"
+                        >Thái Lan</a
+                      >
                     </li>
                     <li class="dropdown-item">
-                      <a class="nav-link" href="/pages/tours/asia.html">Châu Á</a>
+                      <a class="nav-link" href="/pages/tours/asia.html"
+                        >Châu Á</a
+                      >
                     </li>
                     <li class="dropdown-item">
-                      <a class="nav-link" href="/pages/tours/europe.html">Châu Âu</a>
+                      <a class="nav-link" href="/pages/tours/europe.html"
+                        >Châu Âu</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -63,7 +70,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a href="/pages/news.html" class="app-nav-link nav-link active"
+                <a href="/pages/news.html" class="app-nav-link nav-link"
                   >Tin Tức</a
                 >
               </li>
@@ -82,12 +89,11 @@
           </div>
         </div>
       </header>
-
       <div class="main">
         <aside id="side-menu" class="side-menu" data-menu-show="false">
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a href="/" class="app-nav-link nav-link">Trang chủ</a>
+              <a href="/" class="app-nav-link nav-link active">Trang chủ</a>
             </li>
             <li class="nav-item">
               <a href="/pages/about.html" class="app-nav-link nav-link"
@@ -95,157 +101,93 @@
               >
             </li>
             <li class="nav-item">
-              <a href="/pages/news.html" class="app-nav-link nav-link active"
+              <a href="/pages/news.html" class="app-nav-link nav-link"
                 >Tin Tức</a
               >
             </li>
             <li class="nav-item">
-              <a href="/pages/contact.html" class="app-nav-link nav-link">Liên Hệ</a>
+              <a href="/pages/contact.html" class="app-nav-link nav-link"
+                >Liên Hệ</a
+              >
             </li>
           </ul>
         </aside>
+
         <section
           class="header-section"
           style="
             padding: 200px 0 80px 0;
-            background-image: url('/photos/f_webp/beach.jpg');
+            background-image: url('/photos/f_webp/vietnam.jpg');
           "
         >
           <div class="container position-relative">
-            <h3 class="text-capitalize text-light position-absolute fw-bold">
-              Tin tức
+            <h3
+              id="location"
+              class="text-capitalize text-light position-absolute fw-bold"
+            >
+              Liên Hệ
             </h3>
           </div>
         </section>
 
         <section class="section">
-          <div class="container">
-            <div class="row g-3">
+          <div class="container-md">
+            <div class="row">
               <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="card flex-row" style="border: none;">
-                  <div class="col">
-                    <img
-                      class="img-fluid w-100 h-100"
-                      src="/photos/f_webp/germany.jpg"
-                    />
+                <h3>Liên hệ với chúng tôi</h3>
+                <p>
+                  <strong>Đây là dữ liệu mẫu –</strong> hoàn toàn có thể thay đổi, chỉ đơn giản là 
+                  một đoạn văn bản giả, được dùng vào việc trình bày và dàn trang 
+                  phục vụ cho in ấn. Lorem Ipsum đã được sử dụng như một văn bản 
+                  chuẩn cho ngành công nghiệp in ấn từ những năm 1500, khi một 
+                  họa sĩ vô danh ghép nhiều đoạn văn bản với nhau để tạo thành 
+                  một bản mẫu văn bản.
+                </p>
+                <form>
+                  <div class="form-group mb-3">
+                    <label for="name" class="form-label">Tên của bạn <sup class="text-danger">*</sup></label>
+                    <input id="name" class="form-control" type="text">
                   </div>
-                  <div class="col">
-                    <div class="card-body" style="background-color: #52a9f0; padding: 30px;">
-                      <h6
-                        class="card-subtitle text-light text-uppercase fw-medium mb-2"
-                      >
-                        Travel tips
-                      </h6>
-                      <h5 class="card-title text-light fw-bold app-line-height_40">
-                        Cần chuẩn bị gì trước khi đi du lịch
-                      </h5>
-                      <p class="text-light mt-4 mb-3">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Dignissimos illum explicabo nihil a excepturi
-                        esse, optio sed...
-                      </p>
-                      <a
-                        href="/pages/news/travel_tips.html"
-                        class="btn btn-light"
-                        >Chi tiết</a
-                      >
-                    </div>
+
+                  <div class="form-group mb-3">
+                    <label for="email" class="form-label">Địa chỉ email <sup class="text-danger">*</sup></label>
+                    <input id="email" class="form-control" type="text">
                   </div>
-                </div>
+
+                  <div class="form-group mb-3">
+                    <label for="subtitle" class="form-label">Tiêu đề</label>
+                    <input id="subtitle" class="form-control" type="text">
+                  </div>
+
+                  <div class="form-group mb-3">
+                    <label for="message" class="form-label">Thông điệp</label>
+                    <textarea id="message" class="form-control" row="6"></textarea>
+                  </div>
+
+                  <button class="btn btn-primary" type="button">Gửi đi</button>
+                </form>
               </div>
               <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="card flex-row" style="border: none;">
-                  <div class="col">
-                    <img
-                      class="img-fluid w-100 h-100"
-                      src="/photos/f_webp/vietnam.jpg"
-                    />
+                <div class="app-information">
+                  <div class="line-item">
+                    <h6>Địa Chỉ</h6>
+                    <p>Số 123 Đường Phan Chu Trinh, Quận 10, TP.HCM</p>
                   </div>
-                  <div class="col">
-                    <div class="card-body" style="background-color: #52a9f0; padding: 30px;">
-                      <h6
-                        class="card-subtitle text-light text-uppercase fw-medium mb-2"
-                      >
-                        Travel tips
-                      </h6>
-                      <h5 class="card-title text-light fw-bold app-line-height_40">
-                        Tour theo đoàn được hình thành như thế...
-                      </h5>
-                      <p class="text-light mt-4 mb-3">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Dignissimos illum explicabo nihil a excepturi
-                        esse, optio sed...
-                      </p>
-                      <a
-                        href="/pages/news/group_tours.html"
-                        class="btn btn-light"
-                        >Chi tiết</a
-                      >
-                    </div>
+                  <div class="line-item">
+                    <h6>Điện Thoại</h6>
+                    <p>0123.456.789</p>
+                  </div>  
+                  <div class="line-item">
+                    <h6>Email</h6>
+                    <p>contoso@demon.com</p>
                   </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="card flex-row" style="border: none;">
-                  <div class="col">
-                    <img
-                      class="img-fluid w-100 h-100"
-                      src="/photos/f_webp/germany.jpg"
-                    />
+                  <div class="line-item">
+                    <h6>Mở Cửa</h6>
+                    <p>08h sáng tới 17h chiều</p>
                   </div>
-                  <div class="col">
-                    <div class="card-body" style="background-color: #52a9f0; padding: 30px;">
-                      <h6
-                        class="card-subtitle text-light text-uppercase fw-medium mb-2"
-                      >
-                        Travel tips
-                      </h6>
-                      <h5 class="card-title text-light fw-bold app-line-height_40">
-                        Du lịch nước ngoài cần làm thủ tục gì
-                      </h5>
-                      <p class="text-light mt-4 mb-3">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Dignissimos illum explicabo nihil a excepturi
-                        esse, optio sed...
-                      </p>
-                      <a
-                        href="/pages/news/travel_procedures.html"
-                        class="btn btn-light"
-                        >Chi tiết</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="card flex-row" style="border: none;">
-                  <div class="col">
-                    <img
-                      class="img-fluid w-100 h-100"
-                      src="/photos/f_webp/thailand.jpg"
-                    />
-                  </div>
-                  <div class="col">
-                    <div class="card-body" style="background-color: #52a9f0; padding: 30px;">
-                      <h6
-                        class="card-subtitle text-light text-uppercase fw-medium mb-2"
-                      >
-                        Travel tips
-                      </h6>
-                      <h5 class="card-title text-light fw-bold app-line-height_40">
-                        Mùa này du lịch ở đâu
-                      </h5>
-                      <p class="text-light mt-4 mb-3">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Dignissimos illum explicabo nihil a excepturi
-                        esse, optio sed...
-                      </p>
-                      <a
-                        href="/pages/news/recomend_tours.html"
-                        class="btn btn-light"
-                        >Chi tiết</a
-                      >
-                    </div>
+                  <div style="padding: 15px 10px;">
+                    <h6>Hỗ trợ 24/7</h6>
+                    <h1>0123.456.789</h1>
                   </div>
                 </div>
               </div>
@@ -314,12 +256,13 @@
           <p class="copyright m-0 text-light fst-italic"></p>
         </div>
       </div>
-    </div>
 
-    <script src="/assets/js/jquery-3.7.1.min.js"></script>
-    <script src="/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/anime.min.js"></script>
-    <script src="/assets/js/lodash.js"></script>
-    <script src="/assets/js/script.js"></script>
+      <script src="/assets/js/jquery-3.7.1.min.js"></script>
+      <script src="/assets/js/bootstrap.bundle.min.js"></script>
+      <script src="/assets/js/anime.min.js"></script>
+      <script src="/assets/js/lodash.js"></script>
+
+      <script src="/assets/js/script.js"></script>
+    </div>
   </body>
 </html>
